@@ -1,5 +1,6 @@
 package Uebungen.Beispiele5;
 
+// noch nicht fertig
 public class Mitarbeiter {
     String vorname;
     String nachname;
