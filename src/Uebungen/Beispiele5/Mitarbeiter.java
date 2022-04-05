@@ -8,34 +8,34 @@ public class Mitarbeiter {
     int alter;
 
     public double monatsAbrechnung() {
-        double jahresGehalt = gehalt * 12;
-        double gehaltAbzglSteuern = 0;
-        // 20 % SV
-        jahresGehalt *= 0.8;
-
-        double nochAbzurechnen = jahresGehalt;
-
-        if (jahresGehalt > 50000) {
-            gehaltAbzglSteuern += jahresGehalt;
-
-//
-//        if (jahresGehalt > 0) {
-//            gehaltAbzglSteuern += (jahresGehalt % 10000) * 0.9;
-//        }
-//        if (jahresGehalt > 10000) {
-//            gehaltAbzglSteuern += (jahresGehalt - 10000) * 0.8;
-//        }
-//        if (jahresGehalt > 20000) {
-//            gehaltAbzglSteuern += (jahresGehalt - 20000) * 0.68;
-//        }
-//        if (jahresGehalt > 30000) {
-//            gehaltAbzglSteuern += (jahresGehalt - 30000) * 0.55;
-//        }
-//        if (jahresGehalt > 50000) {
-//            gehaltAbzglSteuern += (jahresGehalt - 50000) * 0.4;
-//        }
-
-        }
-        return (jahresGehalt) / 12;
+        return jahresAbrechnung() / 12;
     }
+
+    public double jahresAbrechnung() {
+        double neuesGehalt = gehalt * 12;
+        neuesGehalt *= 0.8; // SV
+
+        double nochAbzurechnen = neuesGehalt;
+
+        if (nochAbzurechnen > 50000) {
+            neuesGehalt -= (nochAbzurechnen - 50000) * 0.6;
+            nochAbzurechnen = 50000;
+        }
+        if (nochAbzurechnen > 30000) {
+            neuesGehalt -= (nochAbzurechnen - 30000) * 0.45;
+            nochAbzurechnen = 30000;
+        }
+        if (nochAbzurechnen > 20000) {
+            neuesGehalt -= (nochAbzurechnen - 20000) * 0.32;
+            nochAbzurechnen = 20000;
+        }
+        if (nochAbzurechnen > 10000) {
+            neuesGehalt -= (nochAbzurechnen - 10000) * 0.2;
+            nochAbzurechnen = 10000;
+        }
+        neuesGehalt -= nochAbzurechnen * 0.1;
+
+        return neuesGehalt;
+    }
+
 }
