@@ -23,5 +23,5 @@ public class Bsp2 {
         return (2 * laenge * breite) + (2 * breite * hoehe) + (2 * laenge * hoehe);
     }
 
-
 }
+
