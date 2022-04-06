@@ -1,4 +1,4 @@
-package Uebungen.Unterricht.LivingRoom;
+package Uebungen.Unterricht.Objekte.LivingRoom;
 
 public class LivingRoom {
     public static void main(String[] args) {

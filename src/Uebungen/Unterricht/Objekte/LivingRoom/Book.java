@@ -1,4 +1,4 @@
-package Uebungen.Unterricht.LivingRoom;
+package Uebungen.Unterricht.Objekte.LivingRoom;
 
 public class Book {
     private String title;

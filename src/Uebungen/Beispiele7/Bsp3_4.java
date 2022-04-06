@@ -2,7 +2,7 @@ package Uebungen.Beispiele7;
 
 import java.util.Arrays;
 
-public class Bsp3_2 {
+public class Bsp3_4 {
     public static void main(String[] args) {
         int[][] array = new int[][]{{1, 30, 40}, {2, 50, 20}, {3, 20, 60}};
 
