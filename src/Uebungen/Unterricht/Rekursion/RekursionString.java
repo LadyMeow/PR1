@@ -3,7 +3,7 @@ package Uebungen.Unterricht.Rekursion;
 public class RekursionString {
     public static void main(String[] args) {
         String teil1 = "hallo";
-        String teil2 = "al";
+        String teil2 = "ll";
 
         System.out.println(substring(teil1, teil2));
 
